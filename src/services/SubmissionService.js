@@ -14,7 +14,7 @@ async addSubmission(submission){
     if(!submission){
         throw {message:"not able to create submission"};
     }
-    console.log(submission);
+    console.log("the submission is",submission);
      const response=await submissionproducers(submission);
      return {queueresponse:response,submission};
 }

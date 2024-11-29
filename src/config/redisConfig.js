@@ -1,4 +1,4 @@
-const redis=require('ioredis')
+const Redis=require('ioredis')
 
 const serverConfig=require('./serverConfig');
 

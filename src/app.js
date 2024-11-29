@@ -7,11 +7,11 @@ const repoPlugins=require('./repository/repositoryPlugins');
  */
 
 async function app(fastify,options){
-         fastify.register(require('@fastify/cors'));
-         fastify.register(repoPlugins);
-         fastify.register(servicePlugins);
+        await fastify.register(require('@fastify/cors'));
+        await  fastify.register(repoPlugins);
+        await  fastify.register(servicePlugins);
          //register test route
-         fastify.register(require('./routes/api/apiRoutes'),{prefix:'/api'});
+         await  fastify.register(require('./routes/api/apiRoutes'),{prefix:'/api'});
         
 }
 

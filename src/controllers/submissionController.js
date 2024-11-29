@@ -8,8 +8,9 @@ async function pingRequest(req,res){
 
 
 //ADD VALIDATION LAYER>>>
-async function createSubission(req,res){
+async function createSubmission(req,res){
     const response=await this.SubmissionService.addSubmission(req.body);
+    console.log(response);
     return res.status(201).send({
         error:{},
         data:response,
@@ -19,5 +20,5 @@ async function createSubission(req,res){
 }
 module.exports={
     pingRequest,
-    createSubission
+    createSubmission
 };

@@ -1,6 +1,5 @@
+const createSubmission=require('../../../controllers/submissionController');
 async function submissionRoutes(fastify,options){
-    fastify.post('/',async(req,res)=>{
-        return {data:["todo"]};
-    })
+    fastify.post('/',createSubmission.createSubmission); 
 }
 module.exports=submissionRoutes;
