@@ -4,8 +4,9 @@ const app=require('./app');
 const connectToDB = require('./config/db.config');
 
 const serverConfig=require('./config/serverConfig');
-
+const errorHandler=require('./utils/errorhandler');
 fastify.register(app);  
+fastify.setErrorHandler(errorHandler);
 fastify.listen({port:serverConfig.PORT},async(err)=>{
     if(err){
         fastify.log.error(err);
