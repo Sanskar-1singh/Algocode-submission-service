@@ -13,5 +13,6 @@ fastify.listen({port:serverConfig.PORT},async(err)=>{
         process.exit(1);
     }
     await connectToDB();
+    console.log('db connected');
     console.log(`server up at port ${serverConfig.PORT}`);
 })

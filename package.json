@@ -10,6 +10,7 @@
   "description": "",
   "dependencies": {
     "@fastify/cors": "^10.0.1",
+    "axios": "^1.7.9",
     "bullmq": "^5.29.1",
     "dotenv": "^16.4.5",
     "fastify": "^5.1.0",

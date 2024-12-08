@@ -20,7 +20,7 @@ const submissionschema=new mongoose.Schema({
     status:{
         type:String,
          enum:["pending","success","RE","TLE","MLE","WA"],
-         default:"pending"
+         default:"pending",
     }
 });
 

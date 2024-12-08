@@ -1,4 +1,4 @@
-const BaseError = require("./base.error");
+const BaseError = require("./baseerror");
 const { StatusCodes } = require('http-status-codes');
 
 class InternalServerError extends BaseError {
