@@ -13,7 +13,7 @@ async function createSubmission(req,res){
     
     const response=await this.SubmissionService.addSubmission(req.body);
     console.log(response);
-    return res.status(201).send({
+    return res.status(201).send({//here we actually use .send() in place of .json() as of in express>>>
         error:{},
         data:response,
         success:true,
