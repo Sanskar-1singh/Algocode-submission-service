@@ -16,8 +16,8 @@ async addSubmission(submission){
     //hit the problem admin service and fetch the problem details
     const problemId=submission.problemId;
     const userId=submission.userId;
-    const submissionId=submission._id;
-    console.log(submissionId,"hello");
+   // const submissionId=submission._id;
+    //console.log(submissionId,"hello");
     console.log(problemId);
     const problemadminapiresponse=await fetchproblemDetail(problemId);
 
@@ -51,7 +51,10 @@ async addSubmission(submission){
      console.log(submit._id);
      return {queueresponse:response,submission};
 }
-
+   async updateSubmission(id,data){
+        const response=await this.SubmissionRepository.updateSubmission(id,data);
+        return response;
+   }
 }
 
 module.exports=SubmissionService;
